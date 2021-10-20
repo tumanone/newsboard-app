@@ -1,0 +1,48 @@
+<div class="content-wrapper header">
+  <a
+    [routerLink]="['']">
+    <img src="https://wwwest.solutions/img/global/logo.png" class="logo" alt="logo">
+  </a>
+  <ul
+    ngbNav
+    class="nav-pills">
+    <li class="link-container">
+      <a class="nav-item"
+         routerLinkActive="nav-item-active"
+         [routerLinkActiveOptions]="{exact: true}"
+         [routerLink]="['']">
+        Home
+      </a>
+    </li>
+    <li class="link-container">
+      <a class="nav-item"
+         routerLinkActive="nav-item-active"
+         [routerLink]="['/news']">
+        News
+      </a>
+    </li>
+    <li class="link-container">
+      <a class="nav-item"
+         routerLinkActive="nav-item-active"
+         [routerLink]="['/profile']">
+        Profile
+      </a>
+    </li>
+    <li class="link-container">
+      <a
+        *ngIf="!isLogged"
+        class="nav-item"
+        routerLinkActive="nav-item-active"
+        [routerLink]="['/login']">
+        Log In
+      </a>
+      <a
+        *ngIf="isLogged"
+        class="nav-item"
+        (click)="authService.logOut()">
+        Log Out
+      </a>
+    </li>
+  </ul>
+</div>
+

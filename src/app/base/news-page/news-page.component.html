@@ -1,0 +1,15 @@
+<div class="content-wrapper">
+  <div class="container">
+    <div
+      *ngFor="let news of newsArr; let i = index"
+      class="card mb-3 shadow-lg w-90">
+      <img [src]="news.urlToImage" alt="Article image">
+      <div class="card-body">
+        <h4>{{news.title}}</h4>
+        <p>{{news.author}}</p>
+        <p class="news-text">{{news.description}}</p>
+        <a [href]="news.url" class="btn btn-primary">Go to full article</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.link-container {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.nav-item {
+  padding: .8rem 1.5rem;
+  color: #000;
+  border-radius: 3px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(black, 0.2);
+  }
+
+  &-active {
+    background-color: royalblue !important;
+    color: #fff;
+  }
+}
+
+.logo-container {
+  height: 4rem;
+  background-position: top;
+  background-size: cover;
+}
+
+.logo {
+  height: 3rem;
+}
+
+
